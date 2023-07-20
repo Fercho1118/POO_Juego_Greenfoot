@@ -8,12 +8,37 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class superheroe extends Actor
 {
-    /**
-     * Act - do whatever the superheroe wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    private int speed = 15;
+    
     public void act()
     {
-        // Add your action code here.
+        if(Greenfoot.isKeyDown("right")) {
+            setLocation(getX() + speed, getY());
+        }// Add your action code here.
+        if(Greenfoot.isKeyDown("left")) {
+            setLocation(getX() - speed, getY());
+        }
+        if(Greenfoot.isKeyDown("up")) {
+            setLocation(getX(), getY() - speed);
+        }
+        if(Greenfoot.isKeyDown("down")) {
+            setLocation(getX(), getY() + speed);
+        }
+        if(canSee(meteorito.class)) {
+            eat(meteorito.class);
+        }
     }
+    
+    public boolean canSee(Class clss) {
+        Actor actor = getOneObjectAtOffset(0, 0, clss);
+        return actor != null;
+    }
+    
+    public void eat(Class clss) {
+        Actor actor = getOneObjectAtOffset(0, 0, clss);
+        if(actor != null) {
+            getWorld().removeObject(actor);
+        }
+    }
+
 }

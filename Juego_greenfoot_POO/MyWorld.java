@@ -20,4 +20,10 @@ public class MyWorld extends World
         heroe = new superheroe();
         addObject(heroe, getWidth()/2, getHeight()-50);
     }
+    
+    public void act() {
+        if (Greenfoot.getRandomNumber(100) < 1) {
+            addObject(new meteorito(), Greenfoot.getRandomNumber(getWidth()-1), 0);
+        }
+    }
 }
