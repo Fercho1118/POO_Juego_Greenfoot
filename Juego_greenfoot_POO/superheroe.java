@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class superheroe extends Actor
 {
-    private int speed = 15;
+    private int speed = 10;
     
     public void act()
     {
@@ -30,12 +30,12 @@ public class superheroe extends Actor
     }
     
     public boolean canSee(Class clss) {
-        Actor actor = getOneObjectAtOffset(0, 0, clss);
+        Actor actor = getOneIntersectingObject(clss);
         return actor != null;
     }
     
     public void eat(Class clss) {
-        Actor actor = getOneObjectAtOffset(0, 0, clss);
+        Actor actor = getOneIntersectingObject(clss);
         if(actor != null) {
             getWorld().removeObject(actor);
         }
