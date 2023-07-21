@@ -38,6 +38,7 @@ public class superheroe extends Actor
         Actor actor = getOneIntersectingObject(clss);
         if(actor != null) {
             getWorld().removeObject(actor);
+            ((MyWorld)getWorld()).getPuntuacion().addPuntos(1);
         }
     }
 

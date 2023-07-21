@@ -8,12 +8,28 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Puntuacion extends Actor
 {
-    /**
-     * Act - do whatever the Puntuacion wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act()
+    private int puntos = 0;
+    private GreenfootImage imagen;
+    
+    public Puntuacion()
     {
-        // Add your action code here.
+        imagen = new GreenfootImage(100, 30);
+        setImage(imagen);
+        update();// Add your action code here.
+    }
+    
+    public void addPuntos(int puntos)
+    {
+        this.puntos += puntos;
+        update();
+    }
+    
+    public void update()
+    {
+        imagen.clear();
+        imagen.setColor(Color.WHITE);
+        imagen.setFont(new Font("Arial", 20));
+        imagen.drawString("Puntos: " + puntos, 5, imagen.getHeight()/2 + 5);
+        setImage(imagen);
     }
 }

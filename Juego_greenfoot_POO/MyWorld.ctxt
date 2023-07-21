@@ -1,8 +1,10 @@
 #BlueJ class context
 comment0.target=MyWorld
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ MyWorld\ here.\r\n\ \r\n\ @Fernando\ Rueda\ -\ 23748\r\n\ @Pablo\ Orellana\ -\ 20555\r\n\ @Versi\u00F3n\ No.01\ \r\n
+comment0.text=\r\n\ Juego\ de\ Greenfoot.\r\n\ \r\n\ @Fernando\ Rueda\ -\ 23748\r\n\ @Pablo\ Orellana\ -\ 20555\r\n\ @Versi\u00F3n\ No.01\ \r\n
 comment1.params=
 comment1.target=MyWorld()
 comment2.params=
 comment2.target=void\ act()
-numComments=3
+comment3.params=
+comment3.target=Puntuacion\ getPuntuacion()
+numComments=4
