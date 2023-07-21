@@ -1,5 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.ArrayList;
+import java.util.List;
 /**
  * Juego de Greenfoot.
  * 
@@ -9,10 +10,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-
+    private static final int NUMERO_VIDAS = 3;
     
     private superheroe heroe;
     private Puntuacion puntuacion;
+    private List<Vida> vidas;
     
     public MyWorld()
     {    
@@ -22,6 +24,14 @@ public class MyWorld extends World
         addObject(heroe, getWidth()/2, getHeight()-50);
         puntuacion = new Puntuacion();
         addObject(puntuacion, 50, 25);
+        
+        vidas = new ArrayList<Vida>();
+        for (int i = 0; i < NUMERO_VIDAS; i++)
+        {
+            Vida vida = new Vida();
+            vidas.add(vida);
+            addObject(vida, 550 + 1 * 20, 25);
+        }
     }
     
     public void act() {
