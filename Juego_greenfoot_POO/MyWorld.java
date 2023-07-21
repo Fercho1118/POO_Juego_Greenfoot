@@ -44,5 +44,20 @@ public class MyWorld extends World
     {
         return puntuacion;
     }
+    
+    public void reducirVida()
+    {
+        if (!vidas.isEmpty())
+        {
+            Vida vida = vidas.remove(vidas.size() -1);
+            removeObject(vida);
+            
+            if (vidas.isEmpty())
+            {
+                showText("GAME OVER", getWidth()/2, getHeight()/2);
+                Greenfoot.stop();
+            }
+        }
+    }
 
 }

@@ -41,5 +41,4 @@ public class superheroe extends Actor
             ((MyWorld)getWorld()).getPuntuacion().addPuntos(1);
         }
     }
-
 }

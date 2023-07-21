@@ -11,5 +11,11 @@ public class meteorito extends Actor
     public void act()
     {
         setLocation(getX(), getY()+3);
+        
+        if (getY() + getImage().getHeight() / 2 >= getWorld().getHeight())
+        {
+            ((MyWorld)getWorld()).reducirVida();
+            getWorld().removeObject(this);
+        }
     }
 }
