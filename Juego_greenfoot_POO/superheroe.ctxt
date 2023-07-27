@@ -2,9 +2,11 @@
 comment0.target=superheroe
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ superheroe\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
-comment1.target=void\ act()
-comment2.params=clss
-comment2.target=boolean\ canSee(java.lang.Class)
+comment1.target=superheroe()
+comment2.params=
+comment2.target=void\ act()
 comment3.params=clss
-comment3.target=void\ eat(java.lang.Class)
-numComments=4
+comment3.target=boolean\ canSee(java.lang.Class)
+comment4.params=clss
+comment4.target=void\ eat(java.lang.Class)
+numComments=5

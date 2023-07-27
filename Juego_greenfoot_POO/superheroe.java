@@ -9,6 +9,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class superheroe extends Actor
 {
     private int speed = 10;
+    private GreenfootSound pointSound;
+    
+    public superheroe()
+    {
+        pointSound = new GreenfootSound("points.mp3");
+    }
     
     public void act()
     {
@@ -39,6 +45,7 @@ public class superheroe extends Actor
         if(actor != null) {
             getWorld().removeObject(actor);
             ((MyWorld)getWorld()).getPuntuacion().addPuntos(1);
+            pointSound.play();
         }
     }
 }
