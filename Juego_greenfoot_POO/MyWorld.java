@@ -15,6 +15,7 @@ public class MyWorld extends World
     private superheroe heroe;
     private Puntuacion puntuacion;
     private List<Vida> vidas;
+    private GreenfootSound backgroundMusic;
     
     public MyWorld()
     {    
@@ -58,6 +59,17 @@ public class MyWorld extends World
                 Greenfoot.stop();
             }
         }
+    }
+    
+    public void started()
+    {
+        backgroundMusic = new GreenfootSound("fondo.mp3");
+        backgroundMusic.playLoop();
+    }
+    
+    public void stopped()
+    {
+        backgroundMusic.stop();
     }
 
 }
