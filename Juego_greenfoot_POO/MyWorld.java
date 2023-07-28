@@ -83,4 +83,8 @@ public class MyWorld extends World
         backgroundMusic.stop();
     }
 
+    public void mensajevictoria()
+    {
+      showText("¡VICTORIA!", getWidth()/2, getHeight()/2);  
+    }
 }

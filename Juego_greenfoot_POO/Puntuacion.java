@@ -10,6 +10,7 @@ public class Puntuacion extends Actor
 {
     private int puntos = 0;
     private GreenfootImage imagen;
+    private static final int PUNTOS_VICTORIA = 100;
     
     public Puntuacion()
     {
@@ -21,6 +22,12 @@ public class Puntuacion extends Actor
     public void addPuntos(int puntos)
     {
         this.puntos += puntos;
+        if (this.puntos >= PUNTOS_VICTORIA)
+        {
+            MyWorld mundo = (MyWorld)getWorld();
+            mundo.mensajevictoria();
+            Greenfoot.stop();
+        }
         update();
     }
     
