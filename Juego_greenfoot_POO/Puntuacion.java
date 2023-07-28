@@ -10,7 +10,7 @@ public class Puntuacion extends Actor
 {
     private int puntos = 0;
     private GreenfootImage imagen;
-    private static final int PUNTOS_VICTORIA = 10;
+    private static final int PUNTOS_VICTORIA = 100;
     
     public Puntuacion()
     {
