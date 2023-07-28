@@ -18,6 +18,7 @@ public class MyWorld extends World
     private GreenfootSound backgroundMusic;
     private GreenfootSound loseLifeSound; 
     private GreenfootSound gameOverSound;
+    private GreenfootSound victorySound;
     
     public MyWorld()
     {    
@@ -37,6 +38,7 @@ public class MyWorld extends World
         }
         loseLifeSound = new GreenfootSound("perder_vida.mp3");
         gameOverSound = new GreenfootSound("perder_juego.mp3");
+        victorySound = new GreenfootSound("victory.mp3");
     }
     
     public void act() {
@@ -85,6 +87,7 @@ public class MyWorld extends World
 
     public void mensajevictoria()
     {
-      showText("¡VICTORIA!", getWidth()/2, getHeight()/2);  
+      showText("¡VICTORIA!", getWidth()/2, getHeight()/2);
+      victorySound.play();
     }
 }
