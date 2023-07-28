@@ -16,7 +16,7 @@ public class MyWorld extends World
     private Puntuacion puntuacion;
     private List<Vida> vidas;
     private GreenfootSound backgroundMusic;
-     
+    private GreenfootSound loseLifeSound; 
     
     public MyWorld()
     {    
@@ -34,6 +34,7 @@ public class MyWorld extends World
             vidas.add(vida);
             addObject(vida, 550 + 1 * 20, 25);
         }
+        loseLifeSound = new GreenfootSound("perder_vida.mp3");
     }
     
     public void act() {
@@ -58,6 +59,10 @@ public class MyWorld extends World
             {
                 showText("GAME OVER", getWidth()/2, getHeight()/2);
                 Greenfoot.stop();
+            }
+            else
+            {
+                loseLifeSound.play();
             }
         }
     }
