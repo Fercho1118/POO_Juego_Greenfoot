@@ -17,6 +17,7 @@ public class MyWorld extends World
     private List<Vida> vidas;
     private GreenfootSound backgroundMusic;
     private GreenfootSound loseLifeSound; 
+    private GreenfootSound gameOverSound;
     
     public MyWorld()
     {    
@@ -35,6 +36,7 @@ public class MyWorld extends World
             addObject(vida, 550 + 1 * 20, 25);
         }
         loseLifeSound = new GreenfootSound("perder_vida.mp3");
+        gameOverSound = new GreenfootSound("perder_juego.mp3");
     }
     
     public void act() {
@@ -57,6 +59,8 @@ public class MyWorld extends World
             
             if (vidas.isEmpty())
             {
+                gameOverSound.play();
+                gameOverSound.setVolume(50);
                 showText("GAME OVER", getWidth()/2, getHeight()/2);
                 Greenfoot.stop();
             }
